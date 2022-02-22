@@ -8,7 +8,7 @@ export const Home = () => {
     <Container>
       < ContainerInput>
         <CountryInput placeholder='Search for a country'></CountryInput>
-        <CountryFilter  placeholder='Filter by Region'></CountryFilter>
+        <CountryFilter  ><p>Filter by Region</p> <span>i</span></CountryFilter>
       </ ContainerInput>
       {/* card */}
 

@@ -12,14 +12,12 @@ export const Container = styled.div`
 export const CountryInput = styled.input`
     /* background-color: red; */
     height: 50px;
-    width: 30%;
+    width: 37%;
 
     border: none;
     border-radius: 5px;
 
     padding: 10px;
-    
-    
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px;
 `
 
@@ -33,10 +31,13 @@ export const ContainerInput = styled.div`
 `
 
 
-export const CountryFilter = styled.input`
+export const CountryFilter = styled.div`
     width: 15%;
-    color: black;
+    background-color: white;
+    display: flex;
+        justify-content: space-around;
+        align-items: center;
     font-weight: bold;
-    padding: 10px;
+    
 `
 

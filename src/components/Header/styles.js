@@ -17,14 +17,14 @@ export const Nav = styled.nav`
         align-items: center;
 `
 
-export const H1 = styled.h1`
-    font-size: 2.5rem;
-    font-weight: 800;
-`
+// export const H1 = styled.h1`
+//     font-size: 2.5rem;
+//     font-weight: 800;
+// `
 
-export const H2 = styled.h2`
-    font-size: 2rem;
-    font-weight: 800;
-`
+// export const H2 = styled.h2`
+//     font-size: 2rem;
+//     font-weight: 800;
+// `
 
 

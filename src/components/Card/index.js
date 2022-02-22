@@ -1,5 +1,7 @@
 import React from 'react';
-import { CardsContainer , Img, Detail} from './styles';
+
+import { CardsContainer , Img, Detail ,DetailDiv} from './styles';
+
 
 export const Card = () => {
   return (
@@ -8,10 +10,13 @@ export const Card = () => {
         <h2>imagen</h2>
       </Img>
       <Detail>
+
         <h2> Germany</h2>
-        <h3>population</h3> 81.770.900
-        <h3>Region</h3> Europe
-        <h3>Capital</h3> Berlin
+
+        <DetailDiv className='Population'> <h3>Population:  	&nbsp;</h3> <p>81.770.900</p>  </DetailDiv>
+        <DetailDiv> <h3>Region: &nbsp;</h3> <p>Europe</p> </DetailDiv>
+        <DetailDiv> <h3>Capital: &nbsp;</h3>  <p>Berlin</p>  </DetailDiv>
+        
       </Detail>
     </CardsContainer>
   )
