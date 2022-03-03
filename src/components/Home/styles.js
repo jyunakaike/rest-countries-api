@@ -31,13 +31,23 @@ export const ContainerInput = styled.div`
 `
 
 
-export const CountryFilter = styled.div`
+export const CountryFilter = styled.select`
     width: 15%;
     background-color: white;
     display: flex;
         justify-content: space-around;
         align-items: center;
     font-weight: bold;
-    
+    padding: 10px;
 `
+
+export const CountryFilterMenu = styled.option`
+    width: 100%;
+    background-color: yellow;
+    font-weight: bold;
+    font-size: 2rem;
+`
+
+
+
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Container, ContainerInput, CountryInput, CountryFilter } from './styles'
+import { Container, ContainerInput, CountryInput, CountryFilter, CountryFilterMenu } from './styles'
 
 import { ListOfCards } from '../ListOfCards'
 
@@ -10,9 +10,10 @@ import { Card } from '../Card'
 export const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState()
-
-
   const [country, setCountry] = useState([])
+
+  const [filterMenu, setFilterMenu] = useState(false);
+
 
   useEffect(() => {
     const arrays = ['germany', 'usa', 'brazil', 'iceland', 'afghanistan', 'Åland%20Islands', 'albania', 'algeria']
@@ -32,11 +33,37 @@ export const Home = () => {
       .then(setIsLoaded(true))
   }, [])
 
+  const filterRegion = () => {
+    console.log('Click FilterRegion');
+    setFilterMenu(true);
+  }
+
   return (
     <Container>
       < ContainerInput>
         <CountryInput placeholder='Search for a country'></CountryInput>
-        <CountryFilter  ><p>Filter by Region</p> <span>i</span></CountryFilter>
+
+        <CountryFilter onClick={filterRegion} >
+          <CountryFilterMenu>
+            All Regions
+          </CountryFilterMenu>
+          <CountryFilterMenu>
+            Africa
+          </CountryFilterMenu>
+          <CountryFilterMenu>
+            Americas
+          </CountryFilterMenu>
+          <CountryFilterMenu>
+            Asia
+          </CountryFilterMenu>
+          <CountryFilterMenu>
+            Europe
+          </CountryFilterMenu>
+          <CountryFilterMenu>
+            Oceania
+          </CountryFilterMenu>
+        </CountryFilter>
+
       </ ContainerInput>
       {/* card */}
 
