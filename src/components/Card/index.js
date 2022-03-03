@@ -1,23 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { CardsContainer , Img, Detail ,DetailDiv} from './styles';
+import { CardsContainer, Img, Detail, DetailDiv } from './styles';
 
+export const Card = ({ src , name,population, region, capital }) => {
 
-export const Card = () => {
   return (
+    // (isLoaded)
+    //   ?
     <CardsContainer>
-      <Img>
-        <h2>imagen</h2>
-      </Img>
-      <Detail>
-
-        <h2> Germany</h2>
-
-        <DetailDiv className='Population'> <h3>Population:  	&nbsp;</h3> <p>81.770.900</p>  </DetailDiv>
-        <DetailDiv> <h3>Region: &nbsp;</h3> <p>Europe</p> </DetailDiv>
-        <DetailDiv> <h3>Capital: &nbsp;</h3>  <p>Berlin</p>  </DetailDiv>
-        
-      </Detail>
+      {
+        <React.Fragment >
+          <Img src={src} />
+          <Detail>
+            <h2> {name}</h2>
+            <DetailDiv className='Population'> <h3>Population:  	&nbsp;</h3> <p>{population}</p>  </DetailDiv>
+            <DetailDiv> <h3>Region: &nbsp;</h3> <p>{region}</p> </DetailDiv>
+            <DetailDiv> <h3>Capital: &nbsp;</h3>  <p>{capital}</p>  </DetailDiv>
+          </Detail>
+        </React.Fragment>
+      }
     </CardsContainer>
+    // :
+    // <div> Loading ...</div>
   )
 }

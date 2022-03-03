@@ -9,6 +9,7 @@ const App = () => {
         <GlobalStyle />
         <Header />
         <Home />
+         
       
     </React.Fragment>
   )

@@ -4,13 +4,14 @@ export const CardsContainer = styled.div`
     height: 340px;
     width: 260px;
     /* width: 20%; */
-    background-color: yellow;
+    /* background-color: yellow; */
 `
 
-export const Img = styled.div`
+export const Img = styled.img`
     height: 50%;
     width: 260px;
-    background-color: red;
+    /* background-color: red; */
+    object-fit: cover;
 `
 export const Detail= styled.div`
     height: 50%;

@@ -22,7 +22,7 @@ export const CountryInput = styled.input`
 `
 
 export const ContainerInput = styled.div`
-    background-color: red;
+    /* background-color: red; */
     width: 100%;
     display: flex;
         justify-content: space-between;

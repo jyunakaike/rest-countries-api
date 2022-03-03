@@ -3,13 +3,11 @@ import { CardsContainer } from './styles'
 
 import { Card } from '../Card'
 
-export const ListOfCards = () => {
-    const array = [1,2,3,4,5,6,7,8]
-
+export const ListOfCards = ({children}) => {
     return (
         <CardsContainer>
             {
-                array.map(card =>  <Card key={card}></Card>)
+                children
             }
         </CardsContainer>
     )
