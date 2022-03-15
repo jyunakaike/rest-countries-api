@@ -13,12 +13,19 @@ export const Home = () => {
 
   const [name, setName] = useState("")
 
+  const clearInput = () => {
+    const inpt =  document.getElementById("countryName");
+    inpt.value = "";
+    setName("");
+  }
+
   useEffect(() => {
     if (region1 == "All") {
       fetch(`https://restcountries.com/v3.1/all`)
         .then(res => res.json())
         .then(
           (data) => {
+            clearInput()
             setIsLoaded(true)
             setCountry(data)
           },
@@ -35,9 +42,9 @@ export const Home = () => {
         .then(res => res.json())
         .then(
           (data) => {
+            clearInput()
             setIsLoaded(true)
             setCountry(data)
-            console.log()
           },
           (error) => {
             setIsLoaded(true)
@@ -49,49 +56,11 @@ export const Home = () => {
     }
   }, [region1])
 
-  // useEffect(() => {
-  //   // if (!name.length) {
-  //   //   null
-  //   //   console.log("Es nulo");
-  //   // }
-  //   // else {
-  //   //   const filterCountry = country.filter(c => {
-  //   //     const countryName = c.name.common.toLowerCase();
-  //   //     const searchName = name.toLowerCase();
-  //   //     // console.log(countryName, searchName);
-  //   //     return countryName.includes(searchName)
-  //   //   })
-  //   //   setCountry(filterCountry)
-  //   //   console.log('filtered name', name);
-  //   //   console.log('country', country)
-  //   // }
-  //   console.log(name)
-  // }, [name])
-
-  // useEffect(() => {
-  //   if(!name.length){
-  //     console.log("null")
-  //   }
-  //   else{
-  //     console.log(country)
-  //   }
-  // }, [country])
-
-
   const filterRegion = (region) => {
     setRegion1(region)
   }
 
-  // const filterInput = (input) => {
-  //   setName(input);
-  // }
-
   const filterInput = (input) => {
-    console.log(country.filter(c => {
-      const countryName = c.name.common.toLowerCase();
-      const searchName = input.toLowerCase();
-      return countryName.includes(searchName)
-    }));
     setName(country.filter(c => {
       const countryName = c.name.common.toLowerCase();
       const searchName = input.toLowerCase();
@@ -102,8 +71,8 @@ export const Home = () => {
   return (
     <Container>
       < ContainerInput>
-        <CountryInput placeholder='Search for a country' onChange={(e) => filterInput(e.target.value)} ></CountryInput>
-        <CountryFilter onChange={(e) => filterRegion(e.target.value)} >
+        <CountryInput placeholder='Search for a country' onChange={(e) => filterInput(e.target.value)} id={"countryName"} ></CountryInput>
+        <CountryFilter onChange={(e) => filterRegion(e.target.value)}  >
           <CountryFilterMenu value="All">
             All Regions
           </CountryFilterMenu>
@@ -135,7 +104,7 @@ export const Home = () => {
         {
           (isLoaded)
             ?
-              (!name)
+            (!name)
               ?
               country.map(card =>
                 <Card
@@ -147,19 +116,18 @@ export const Home = () => {
                   capital={card.capital}
                 />)
               :
-                name.map(card =>
-                  <Card
-                    key={card.name.common}
-                    src={card.flags.png}
-                    name={card.name.common}
-                    population={card.population}
-                    region={card.region}
-                    capital={card.capital}
-                  />)
+              name.map(card =>
+                <Card
+                  key={card.name.common}
+                  src={card.flags.png}
+                  name={card.name.common}
+                  population={card.population}
+                  region={card.region}
+                  capital={card.capital}
+                />)
             : <div> Loading ...</div>
         }
       </ListOfCards >
     </Container>
-
   )
 }
