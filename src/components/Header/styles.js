@@ -15,6 +15,7 @@ export const Nav = styled.nav`
     display: flex;
         justify-content: space-between;
         align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 `
 
 // export const H1 = styled.h1`
