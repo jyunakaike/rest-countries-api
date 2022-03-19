@@ -6,7 +6,12 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Nunito Sans', sans-serif;
     margin: 0;
     padding: 0;
+    /* background-color: black; */
 }
+
+/* body{
+    background-color: black;
+} */
 
 html{
     font-size: 62.5%;
