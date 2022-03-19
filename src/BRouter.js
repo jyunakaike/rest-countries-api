@@ -10,7 +10,7 @@ const BRouter = () => {
       <BrowserRouter>
         <Routes>
             <Route exact path='/' element={<App />}  />
-            <Route exact path='/country/:id' element={<Country />} />
+            <Route exact path='/country/:name' element={<Country />} />
         </Routes>
       </BrowserRouter>
     

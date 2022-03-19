@@ -5,7 +5,7 @@ export const Container = styled.div`
     background-color: #fafafa;
     /* background-color: blue; */
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     padding: 50px 5.6% 0 5.6% ;
 `
 
@@ -43,7 +43,6 @@ export const CountryFilter = styled.select`
 
 export const CountryFilterMenu = styled.option`
     width: 100%;
-    background-color: yellow;
     font-weight: bold;
     font-size: 2rem;
 `
