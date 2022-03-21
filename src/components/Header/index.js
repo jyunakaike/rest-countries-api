@@ -1,6 +1,8 @@
 import React from 'react';
 import { Nav } from './styles';
 
+import {FaMoon} from 'react-icons/fa'
+
 export const Header = ({dark, setDark}) => {
   
   // (dark)
@@ -19,9 +21,9 @@ export const Header = ({dark, setDark}) => {
 
         {
           (dark)
-            ? <h2 onClick={()=>{changeMode()}}>  Light Mode </h2>
+            ? <h2 onClick={()=>{changeMode()}}> <FaMoon style={{color: "white"}} />  Light Mode </h2>
             
-            : <h2 onClick={()=>{changeMode()}} >  Dark Mode </h2>
+            : <h2 onClick={()=>{changeMode()}} > <FaMoon />  Dark Mode </h2>
         
         }
       

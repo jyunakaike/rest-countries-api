@@ -2,17 +2,22 @@ import styled from "styled-components";
 
 
 export const BackButton = styled.div`
-    font-size: 1rem;
+    font-size: 1.5rem;
     width: 10%;
     /* background-color: white ; */
     height: 40px;
     padding:  auto;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    display:grid;
-        place-items: center;
+    /* display:grid;
+        place-items: center; */
+    display: flex ;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
     margin-left: 5% ;
     margin-top: 5%;
     margin-bottom: 7%;
+
 `
 
 export const CountryContainer = styled.div`

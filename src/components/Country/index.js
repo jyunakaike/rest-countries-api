@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import {AiOutlineArrowLeft} from 'react-icons/ai'
+
 
 // import { Header } from '../components/Header'
 import { Header } from '../Header'
@@ -9,7 +11,7 @@ import { GlobalStyle } from '../../styles/GlobalStyles'
 import { BackButton, CountryContainer, Flag, DetailContainer, Title, DetailInfoContainer, Detail1, Detail2, ParaDetail, Para } from './styles';
 
 
-export const Country = () => {
+export const Country = ( {dark, setDark}) => {
   const [country, setCountry] = useState();
   const [loaded, setIsLoaded] = useState(false);
 
@@ -38,10 +40,9 @@ export const Country = () => {
 
   return (
     <React.Fragment>
-      <GlobalStyle />
-      <Header />
+      <Header dark={dark} setDark={setDark} />
 
-      <BackButton onClick={() => { history(-1) }}> Back </BackButton>
+      <BackButton onClick={() => { history(-1) }}> <AiOutlineArrowLeft/> Back </BackButton>
       {
         (loaded)
           ?
