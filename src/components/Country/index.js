@@ -2,11 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import {AiOutlineArrowLeft} from 'react-icons/ai'
 
-
-// import { Header } from '../components/Header'
 import { Header } from '../Header'
 import { GlobalStyle } from '../../styles/GlobalStyles'
-// import { GlobalStyle } from '../styles/GlobalStyles'
 
 import { BackButton, CountryContainer, Flag, DetailContainer, Title, DetailInfoContainer, Detail1, Detail2, ParaDetail, Para } from './styles';
 
@@ -16,11 +13,7 @@ export const Country = ( {dark, setDark}) => {
   const [loaded, setIsLoaded] = useState(false);
 
   const detailName = useParams();
-  console.log(detailName.name)
-
   const history = useNavigate();
-
-
 
   useEffect(() => {
     fetch(`https://restcountries.com/v3.1/name/${detailName.name}`)
@@ -29,7 +22,6 @@ export const Country = ( {dark, setDark}) => {
         (data) => {
           setCountry(data)
           setIsLoaded(true)
-
         },
         (error) => {
           setIsLoaded(true)
@@ -41,7 +33,6 @@ export const Country = ( {dark, setDark}) => {
   return (
     <React.Fragment>
       <Header dark={dark} setDark={setDark} />
-
       <BackButton onClick={() => { history(-1) }}> <AiOutlineArrowLeft/> Back </BackButton>
       {
         (loaded)
@@ -93,7 +84,6 @@ export const Country = ( {dark, setDark}) => {
           )
           : <div > Loading </div>
       }
-
     </React.Fragment>
   )
 

@@ -1,15 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    /* background-color: #fafafa; */
-    /* background-color: blue; */
     width: 100%;
-    /* height: 100vh; */
     padding: 50px 5.6% 0 5.6% ;
-
 `
 export const ContainerInput = styled.div`
-    /* background-color: red; */
     width: 100%;
     display: flex;
         justify-content: space-between;
@@ -22,7 +17,6 @@ export const ContainerInput = styled.div`
 `
 
 export const CountryInput = styled.input`
-    /* background-color: red; */
     height: 50px;
     width: 37%;
 
@@ -43,14 +37,11 @@ export const CountryInput = styled.input`
 
         padding: 10px;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
     }
 `
 
-
 export const CountryFilter = styled.select`
     width: 15%;
-    /* background-color: white; */
     display: flex;
         justify-content: space-around;
         align-items: center;
@@ -59,12 +50,6 @@ export const CountryFilter = styled.select`
 
     @media (max-width: 800px){
         width: 50%;
-        /* background-color: white;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        font-weight: bold;
-        padding: 10px; */
     }
 `
 

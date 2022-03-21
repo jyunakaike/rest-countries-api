@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Container, ContainerInput, CountryInput, CountryFilter, CountryFilterMenu } from './styles'
 
 import { ListOfCards } from '../ListOfCards'
+
 // components
 import { Card } from '../Card'
 
@@ -32,7 +33,6 @@ export const Home = () => {
           (error) => {
             setIsLoaded(true)
             setError(true)
-            // console.log(error)
           },
         )
         .then(setIsLoaded(true))
@@ -49,7 +49,6 @@ export const Home = () => {
           (error) => {
             setIsLoaded(true)
             setError(true)
-            // console.log(error)
           },
         )
         .then(setIsLoaded(true))

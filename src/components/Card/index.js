@@ -6,14 +6,11 @@ import { CardsContainer, ImageContainer ,Img, Detail, DetailDiv } from './styles
 export const Card = ({ src, name, population, region, capital }) => {
 
   return (
-    // (isLoaded)
-    //   ?
     <CardsContainer>
       {
         <React.Fragment >
           <ImageContainer>
             <Link
-              // key={name}
               to={`/country/${name}`}
               state={name}
             >
@@ -29,7 +26,5 @@ export const Card = ({ src, name, population, region, capital }) => {
         </React.Fragment>
       }
     </CardsContainer>
-    // :
-    // <div> Loading ...</div>
   )
 }

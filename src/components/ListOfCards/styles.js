@@ -4,10 +4,7 @@ export const CardsContainer = styled.div`
     width: 100%;
     height: 800px;
     display: grid;
-    /* grid-template-columns: auto auto auto auto;  */
-    /* grid-template-columns: 1fr 1fr 1fr 1fr ;  */
     grid-template-columns: repeat(4,  minmax(20px, 1fr ) ); 
-    /* gap: 79px; */
     column-gap: 2.5%;
     row-gap: 20px;
 

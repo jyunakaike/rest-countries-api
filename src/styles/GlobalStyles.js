@@ -7,11 +7,9 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Nunito Sans', sans-serif;
     margin: 0;
     padding: 0;
-    /* background-color: black; */
 }
 
 body{
-    /* background-color: #fafafa; */
     background-color: ${props=>props.bg};
     color : ${props=>props.bgp};
 }
@@ -24,9 +22,6 @@ select{
     background-color: ${props=>props.bg};
     color : ${props=>props.bgp};
 }
-
-
-
 
 html{
     font-size: 62.5%;
