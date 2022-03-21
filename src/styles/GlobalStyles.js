@@ -22,15 +22,22 @@ p{
 h1{
     font-size: 2.5rem;
     font-weight: 800;
+    @media (max-width: 800px) {
+        font-size: 1.5rem;
+        
+    }
 }
 h2{
     font-size: 2rem;
     font-weight: 800;
+    @media (max-width: 800px) {
+        font-size: 1.5rem;
+        
+    }
 }
 
 h3{
     font-size: 1.6rem;
     font-weight: 600;
 }
-
 `

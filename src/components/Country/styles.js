@@ -23,15 +23,29 @@ export const CountryContainer = styled.div`
     display: flex;
         justify-content:space-between;
 
+    @media (max-width: 800px) {
+        /* font-size: 1.5rem; */
+        flex-direction: column;
+    }
+
 `
 export const Flag = styled.img`
     width: 50% ;
     height: 100%;
+    @media (max-width: 800px) {
+        width: 100%;
+    }
 `
 
 export const DetailContainer = styled.div`
     /* background-color: red; */
     width: 40%;
+    @media (max-width: 800px) {
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+    }
+
 `
 
 export const DetailInfoContainer = styled.div`
@@ -42,6 +56,15 @@ export const DetailInfoContainer = styled.div`
         flex-direction: row;
         justify-content: space-between;
 
+    @media (max-width: 800px) {
+        width: 100%;
+        height: 50%;
+        /* background-color:yellow; */
+        width: 100%;
+        display:flex;
+            flex-direction: column;
+    }
+
 `
 
 export const Title = styled.h1`
@@ -49,12 +72,19 @@ export const Title = styled.h1`
 `
 export const Detail1  = styled.div`
     width: 50%;
+
+    @media (max-width: 800px) {
+        width: 100%;
+        margin-bottom: 10% ;
+    }
 `
 export const Detail2  = styled.div`
     width: 50%;
+    @media (max-width: 800px) {
+        width: 100%;
+        margin-bottom: 10% ;
+    }
 `
-
-
 
 export const ParaDetail = styled.p`
     font-weight: bold;
