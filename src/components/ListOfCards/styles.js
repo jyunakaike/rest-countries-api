@@ -10,6 +10,7 @@ export const CardsContainer = styled.div`
     /* gap: 79px; */
     column-gap: 2.5%;
     row-gap: 20px;
+
     @media (max-width: 800px){
         display: grid;
             place-items: center;

@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const BackButton = styled.div`
     font-size: 1rem;
     width: 10%;
-    background-color: white ;
+    /* background-color: white ; */
     height: 40px;
     padding:  auto;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

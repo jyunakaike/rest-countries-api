@@ -74,7 +74,7 @@ export const Home = () => {
         <CountryInput placeholder='Search for a country' onChange={(e) => filterInput(e.target.value)} id={"countryName"} ></CountryInput>
         <CountryFilter onChange={(e) => filterRegion(e.target.value)}  >
           <CountryFilterMenu value="All">
-            All Regions
+            All Regions 
           </CountryFilterMenu>
 
           <CountryFilterMenu value="Africa">

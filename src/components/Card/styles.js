@@ -4,7 +4,9 @@ export const CardsContainer = styled.div`
     height: 340px;
     width: 100%;
     /* width: 20%; */
-    background-color: yellow;
+    border-radius: 5px;
+    /* background-color: white; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
     @media (max-width: 800px){
       height: 340px;
@@ -12,8 +14,7 @@ export const CardsContainer = styled.div`
       max-width: 75%;
       min-width: 50%;
       /* width: 20%; */
-      background-color: yellow;
-     
+      /* background-color: yellow; */
     }
 
 `
@@ -34,7 +35,7 @@ export const Detail= styled.div`
     width: auto;
     padding:7.5% 11.5% 0 11.5%;
     /* padding:20px 30px 0 30px; */
-    background-color: white;
+    /* background-color: white; */
 `
 
 export const DetailDiv = styled.div`
